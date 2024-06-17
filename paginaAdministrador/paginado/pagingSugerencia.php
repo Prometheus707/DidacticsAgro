@@ -27,14 +27,14 @@ $count="SELECT COUNT(*) FROM sugerencia";
 
 
 
-                  <th class='t2' >#</th>
-                  <th class='t3'>Sugerencia</th>
-                  <th class='t4'>Fecha</th>
-                  <th  class='t5'> Instructor</th>
-                  <th class='t6'>Respuesta</th>
-                  <th  class='t7'>Archivo</th>
-                  <th  class='t8'>Atender</th>
-				  <th  class='t9'>Eliminar</th>
+                  <th class='t2' style='background:#29a900; color:white;' >#</th>
+                  <th class='t3' style='background:#29a900; color:white;'>Sugerencia</th>
+                  <th class='t4' style='background:#29a900; color:white;'>Fecha</th>
+                  <th  class='t5' style='background:#29a900; color:white;'> Instructor</th>
+                  <th class='t6' style='background:#29a900; color:white;'>Respuesta</th>
+                  <th  class='t7' style='background:#29a900; color:white;'>Archivo</th>
+                  <th  class='t8' style='background:#29a900; color:white;'>Atender</th>
+				  <th  class='t9' style='background:#29a900; color:white;'>Eliminar</th>
 
 
   ";

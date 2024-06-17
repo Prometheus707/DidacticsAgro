@@ -5,7 +5,7 @@ session_start();
 <?php
    require_once("../conexiondb.php");
 
-
+    include('../include/parametros.php');
 
 /* codigo de cerrar sesion */
   if(($_SESSION['idUsuario'])!=''){
@@ -34,7 +34,9 @@ session_start();
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+   
 <script type="text/javascript">
         $(function() {
           $('#padre > a').hover(function() {
@@ -90,20 +92,17 @@ session_start();
 </head>				<!-- Vertical navbar -->
 <div class="vertical-nav bg-white" id="sidebar">
   <div class="py-4 px-3 mb-4 bg-light">
-    <div class="media d-flex align-items-center"><img src="../images/usuarioD.png" alt="..." width="65" class="mr-3 rounded-circle img-thumbnail shadow-sm">
+    <div class="media d-flex align-items-center" ><img src="../images/usuarioD.png" alt="..." width="65" class="mr-3 rounded-circle img-thumbnail shadow-sm">
       <div class="media-body">
        <h5 class="m-0"> <?php   echo  ''  .$_SESSION['nombre']." <br> ".$_SESSION['apellido']; ?></h5>
         <p class="font-weight-light text-muted mb-0">Administrador</p>
       </div>
     </div>
   </div>
-
-  <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0">Navegación</p>
-
   <ul class="nav flex-column bg-white mb-0">
     <li class="nav-item" id="padre5">
       <a  href="administrador.php" id="miBoton" class="nav-link " >
-                <i  style="color:#ff6b00" id="div5" class="fa fa-th-large mr-3  fa-fw"></i>
+                <i   id="div5" class="fa fa-th-large mr-3  fa-fw"></i>
                 Técnicas Didácticas
             </a>
         </li>
@@ -117,7 +116,7 @@ session_start();
 
 
     <li class="nav-item"  id="padrep">
-      <a href="usuario.php" id="miBoton" class="nav-link " style="background:#ff6b00;color:white">
+      <a href="usuario.php" id="miBoton" class="nav-link " style="background:<?php echo $var_color_sena; ?>;color:white">
                 <i     id="otro_div3" class="fa fa-address-card text-white  mr-3  fa-fw navimmg "></i>
                 Usuarios
             </a>
@@ -175,7 +174,7 @@ session_start();
     <div class="">
 
   <div class="w3-half">
-  <a href="agregarUsu.php"><i class='fas fa-user-plus' style='font-size:40px;padding-left:2%;color:black;padding-top:4%'></i></a><br>
+  <a href="agregarUsu.php"><i class="bi bi-person-fill-add" style='font-size:40px;padding-left:2%;color:black;padding-top:4%'></i></a><br>
 </div><br>
 
       <!------ menu de busqueda--------->
@@ -207,32 +206,33 @@ session_start();
       </div>
 
       <div class="bg-white p-0 rounded my-10 shadow-lg">
-     <footer>
+      <footer style="background-color: <?php echo $var_color_sena; ?>;">
 
-			 <div class="divFp">
+<div class="divFp" style="background-color: <?php echo $var_color_sena; ?>;">
 
-				  <div class="div1F">
-							<img src="../imagenes/sena3.png"  class="imagfooter" >
+  <div class="div1F">
+    <img src="../imagenes/sena3.png" class="imagfooter">
 
-			     </div>
-
-
+  </div>
 
 
-				<div class="div3F">
 
-              Centro Agropecuario Regional Cauca <br>
-Dirección: Cr 9 No 71 N 60, Alto del Cauca - Kilómetro 7 vía a Cali<br>
-Teléfono: (2) 8247678 IP: 22112 Fax: (2) 8247678<br>
-Correo: agropecuario@misena.edu.co
 
-      		     </div>
+  <div class="div3F">
 
-				 <div class="div2F">
-                      	<img src="../imagenes/SENOVA.png"  class="imag2footer" >
-				</div>
-			</div>
-   </footer>
+    Centro Agropecuario Regional Cauca <br>
+    Dirección: Cr 9 No 71 N 60, Alto del Cauca - Kilómetro 7 vía a Cali<br>
+    Teléfono: (2) 8247678 IP: 22112 Fax: (2) 8247678<br>
+    Correo: agropecuario@misena.edu.co
+
+  </div>
+
+  <div class="div2F">
+    <!-- <img src="images/SENOVA.png" class="imag2footer"> -->
+    <img src="../images/LOGOsENNOVA.png" class="imag2footer">
+  </div>
+</div>
+</footer>
    </div>
 
   </div>

@@ -6,7 +6,7 @@ session_start();
 <?php
    require_once("../conexiondb.php");
     $id=$_GET['id'];
-
+    include("../include/parametros.php");
 
 /* codigo de cerrar sesion */
   if(($_SESSION['idUsuario'])!=''){
@@ -131,7 +131,7 @@ session_start();
 
 
     <li class="nav-item"  id="padre2">
-      <a href="sugerenciaAdmin.php"  id="miBoton"   class="nav-link " style="background:#ff6b00;color:white">
+      <a href="sugerenciaAdmin.php"  id="miBoton"   class="nav-link " style="background:<?php echo $var_color_sena; ?>;color:white">
                 <i  id="otro_div2" class="fa fa-cubes mr-3 text-white  fa-fw navimmg"></i>
                 Sugerencias
             </a>
@@ -194,15 +194,15 @@ session_start();
           <p  style="font-size:20px;">Responder sugerencia:</p> <textarea name="comentario" style="width: 90%;padding:2%;font-size:21px" rows="8" cols="80"><?php echo $fila['comentario']; ?></textarea>
         </div>
         <div class="w3-half">
-        <p style="font-size:20px;color:#ff6b00">  Nombre instructor:</p><div style="font-size:18px"> <?php echo $fila['nombreUsuario'] ?>&nbsp<?php echo $fila['apellidoUsuario']; ?> </div>
+        <p style="font-size:20px;color:<?php echo $var_color_sena; ?>">  Nombre instructor:</p><div style="font-size:18px"> <?php echo $fila['nombreUsuario'] ?>&nbsp<?php echo $fila['apellidoUsuario']; ?> </div>
         </div>
         <div class="w3-half">
-          <p style="font-size:20px;color:#ff6b00"> Sugerencia:</p> <div style="font-size:18px"> <?php echo  $fila['sugerencia']; ?></div>
+          <p style="font-size:20px;color:<?php echo $var_color_sena; ?>"> Sugerencia:</p> <div style="font-size:18px"> <?php echo  $fila['sugerencia']; ?></div>
         </div>
         </center><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
           <div style="float:right;width:48%;padding-right:5%">
-          <a href="sugerenciaAdmin.php" style=""><button type="button" class='btn  btn-danger btn-sm' style="font-size: 19px;width:100%" name="button">cancelar</button></a>
+          <a href="sugerenciaAdmin.php" ><button type="button" class='btn  btn-danger btn-sm' style="font-size: 19px;width:100%" name="button">cancelar</button></a>
           </div>
           <div style="width:48%;padding-left:5%">
           <button  class="btn  btn-success btn-sm" style="font-size:19px;width:100%" type="submit" name="">enviar</button>
@@ -224,38 +224,36 @@ session_start();
  </div>
 
 
-      <div class="bg-white p-5 rounded my-5 shadow-sm">
-        <p class="lead font-italic mb-0 text-muted">"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-      </div>
+      
 
       <div class="bg-white p-0 rounded my-10 shadow-lg">
-     <footer>
+      <footer style="background-color: <?php echo $var_color_sena; ?>;">
 
-			 <div class="divFp">
+<div class="divFp" style="background-color: <?php echo $var_color_sena; ?>;">
 
-				  <div class="div1F">
-							<img src="../imagenes/sena3.png"  class="imagfooter" >
+  <div class="div1F">
+    <img src="../imagenes/sena3.png" class="imagfooter">
 
-			     </div>
-
-
+  </div>
 
 
-				<div class="div3F">
 
-              Centro Agropecuario Regional Cauca <br>
-Dirección: Cr 9 No 71 N 60, Alto del Cauca - Kilómetro 7 vía a Cali<br>
-Teléfono: (2) 8247678 IP: 22112 Fax: (2) 8247678<br>
-Correo: agropecuario@misena.edu.co
 
-      		     </div>
+  <div class="div3F">
 
-				 <div class="div2F">
-                      	<img src="../imagenes/SENOVA.png"  class="imag2footer" >
-				</div>
-			</div>
-   </footer>
+    Centro Agropecuario Regional Cauca <br>
+    Dirección: Cr 9 No 71 N 60, Alto del Cauca - Kilómetro 7 vía a Cali<br>
+    Teléfono: (2) 8247678 IP: 22112 Fax: (2) 8247678<br>
+    Correo: agropecuario@misena.edu.co
+
+  </div>
+
+  <div class="div2F">
+    <!-- <img src="images/SENOVA.png" class="imag2footer"> -->
+    <img src="../images/LOGOsENNOVA.png" class="imag2footer">
+  </div>
+</div>
+</footer>
    </div>
 
   </div>

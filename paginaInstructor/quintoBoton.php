@@ -4,7 +4,7 @@ session_start();
 
 <?php
    require_once("../conexiondb.php");
-
+   include("../include/parametros.php");
 
 
 /* codigo de cerrar sesion */
@@ -98,8 +98,8 @@ session_start();
             </a>
     </li>
     <li class="nav-item" >
-      <a href="#" style="	background:#Ff6b00 ;" id="miBoton" class="nav-link text-white">
-                <i  style="	color:white ;" id="otro_div4"  class="far fa-file-alt  mr-3  fa-fw navimmg " style=""></i>
+      <a href="#" style="	background:<?php echo $var_color_sena; ?>; color:white" id="miBoton" class="nav-link text-white">
+                <i  style="	color:white ;" id="otro_div4"  class="far fa-file-alt  mr-3  fa-fw navimmg " ></i>
                         Descubra más aquí
             </a>
     </li>  <li class="nav-item" id="padre6">
@@ -176,19 +176,19 @@ La motivación es un factor que debe ser tenido en cuenta por centros educativos
            <img src="../images/uno.png " width="12%" >  <center>
 
 <img src="../images/sesion.png" width="26%" ><br><br>
-         <a href="iniciosesion.php">   <button type="button" style="background:#ff6b00;color:white;font-size:17px" class="btn btn-outline-dark my-2 my-sm-0 botonInicio" id="myBtn3"> Inicio de sesión</button></a>
+         <a href="iniciosesion.php">   <button type="button" style="background:<?php echo $var_color_sena; ?>;color:white;font-size:17px" class="btn btn-outline-dark my-2 my-sm-0 botonInicio" id="myBtn3"> Inicio de sesión</button></a>
 <br>  <br>
 </center> 
 <img src="../images/tres.png " width="15.8%" >	<br><br><br>
 <center>
           <img src="../images/c.png" width="42%" ><br><br>
-                               <a href="grupos.php" > <button  style="background:#ff6b00;color:white;font-size:17px" class="btn btn-outline-dark my-2 my-sm-0 botonInicio" type="button"  > Formas de conformar grupos</button> </a>
+                               <a href="grupos.php" > <button  style="background:<?php echo $var_color_sena; ?>;color:white;font-size:17px" class="btn btn-outline-dark my-2 my-sm-0 botonInicio" type="button"  > Formas de conformar grupos</button> </a>
                                <br>	<br>
                                </center> 
           <img style="margin-left:-12px" src="../images/cinco.png " width="32%" >
           <center>
 					   	<img src="../images/jolt.png" width="50%" ><br>
-                               <a href="motivadores.php" > <button  style="background:#ff6b00;color:white;font-size:17px" class="btn btn-outline-dark my-2 my-sm-0 botonInicio" type="button"  > Jolts y motivadores</button> </a>
+                               <a href="motivadores.php" > <button  style="background:<?php echo $var_color_sena; ?>;color:white;font-size:17px" class="btn btn-outline-dark my-2 my-sm-0 botonInicio" type="button"  > Jolts y motivadores</button> </a>
 					<br><br> </center>    
 	  <br>
 		
@@ -213,19 +213,19 @@ La motivación es un factor que debe ser tenido en cuenta por centros educativos
          
           <img src="../images/dos.png " width="15.9%" >
           <center>	<img src="../images/cerebro.png" width="23.5%" ><br><br>
-							<a href="rompeHielos.php" > <button  type="button" style="background:#ff6b00;color:white;font-size:17px" class="btn btn-outline-dark my-2 my-sm-0 botonInicio1" > Rompe hielos </button> </a>
+							<a href="rompeHielos.php" > <button  type="button" style="background:<?php echo $var_color_sena; ?>;color:white;font-size:17px" class="btn btn-outline-dark my-2 my-sm-0 botonInicio1" > Rompe hielos </button> </a>
       </center> 
           	<br>
             <img src="../images/cuatro.png " width="16.2%" >
             <center>               
           <img src="../images/positivo.png" width="43%" ><br><br>
-                               <a href="frases.php" > <button  style="background:#ff6b00;color:white;font-size:17px" class="btn btn-outline-dark my-2 my-sm-0 botonInicio" type="button"  > Frases en positivo para usar</button> </a>
+                               <a href="frases.php" > <button  style="background:<?php echo $var_color_sena; ?>;color:white;font-size:17px" class="btn btn-outline-dark my-2 my-sm-0 botonInicio" type="button"  > Frases en positivo para usar</button> </a>
                                <br><br>
         </center> 
         <img src="../images/six.png " width="27%" >
         <center>
 						   <img src="../images/estrcturada.png" width="59%" ><br>
-                        <a href="reflexionCierre.php">   <button type="button" style="background:#ff6b00;color:white;font-size:17px" class="btn btn-outline-dark my-2 my-sm-0 botonInicio" id="myBtn3">Reflexiones estructuradas y cierres de sesión </button></a>
+                        <a href="reflexionCierre.php">   <button type="button" style="background:<?php echo $var_color_sena; ?>;color:white;font-size:17px" class="btn btn-outline-dark my-2 my-sm-0 botonInicio" id="myBtn3">Reflexiones estructuradas y cierres de sesión </button></a>
 				<br>  <br>
 				  </center> 
       
@@ -246,32 +246,33 @@ La motivación es un factor que debe ser tenido en cuenta por centros educativos
     
 
       <div class="bg-white p-0 rounded my-10 shadow-lg">
-           <footer>
+      <footer style="background-color: <?php echo $var_color_sena; ?>;">
 
-			 <div class="divFp">
+<div class="divFp" style="background-color: <?php echo $var_color_sena; ?>;">
 
-				  <div class="div1F">
-							<img src="../imagenes/sena3.png"  class="imagfooter" >
+  <div class="div1F">
+    <img src="../imagenes/sena3.png" class="imagfooter">
 
-			     </div>
-
-
+  </div>
 
 
-				<div class="div3F">
 
-              Centro Agropecuario Regional Cauca <br>
-Dirección: Cr 9 No 71 N 60, Alto del Cauca - Kilómetro 7 vía a Cali<br>
-Teléfono: (2) 8247678 IP: 22112 Fax: (2) 8247678<br>
-Correo: agropecuario@misena.edu.co
 
-      		     </div>
+  <div class="div3F">
 
-				 <div class="div2F">
-                      	<img src="../imagenes/SENOVA.png"  class="imag2footer" >
-				</div>
-			</div>
-   </footer>
+    Centro Agropecuario Regional Cauca <br>
+    Dirección: Cr 9 No 71 N 60, Alto del Cauca - Kilómetro 7 vía a Cali<br>
+    Teléfono: (2) 8247678 IP: 22112 Fax: (2) 8247678<br>
+    Correo: agropecuario@misena.edu.co
+
+  </div>
+
+  <div class="div2F">
+    <!-- <img src="images/SENOVA.png" class="imag2footer"> -->
+    <img src="../images/LOGOsENNOVA.png" class="imag2footer">
+  </div>
+</div>
+</footer>
    </div>
 
   </div>

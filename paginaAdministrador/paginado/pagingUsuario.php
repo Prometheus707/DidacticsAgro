@@ -2,7 +2,9 @@
 
 
 
+
 /* variables */
+
 
 $order="nombreTda ASC";
 $url = basename($_SERVER ["PHP_SELF"]);
@@ -19,24 +21,24 @@ $count="SELECT COUNT(*) FROM usuario ";
 
   $total = ceil($x[0]/$limit_end);
   // se encarga de los caracteres //
+  
  mysqli_set_charset($conecta,"utf8");
+
   echo "<table border='1' class=' table-bordered table-hover'>";
   echo "<thead>";
   echo "<tr >";
 
 
-    echo "<th class='t2'>N.I</th>";
-  echo "<th class='t3'>Nombre</th>";
-  echo "<th class='t4'>Apellido</th>";
-  echo "<th class='t5'>Teléfono</th>";
-  echo "<th class='t5'>Correo</th>";
-  echo "<th class='t6'>Estado</th>";
-  echo "<th class='t7'>Rol</th>";
-  echo "<th class='t8'>Permisos</th>";
-  echo "<th class='t9'>Actualizar</th>";
-  echo "<th class='t10'>Eliminar</th>";
-
-
+  echo "<th class='t2' style='background:#29a900; color:white'>N.I</th>";
+  echo "<th class='t3' style='background:#29a900; color:white'>Nombre</th>";
+  echo "<th class='t4' style='background:#29a900; color:white'>Apellido</th>";
+  echo "<th class='t5' style='background:#29a900; color:white'>Teléfono</th>";
+  echo "<th class='t5' style='background:#29a900; color:white'>Correo</th>";
+  echo "<th class='t6' style='background:#29a900; color:white'>Estado</th>";
+  echo "<th class='t7' style='background:#29a900; color:white'>Rol</th>";
+  echo "<th class='t8' style='background:#29a900; color:white'>Permisos</th>";
+  echo "<th class='t9' style='background:#29a900; color:white'>Actualizar</th>";
+  echo "<th class='t10' style='background:#29a900; color:white'>Eliminar</th>";
 
 
   echo "</tr>";

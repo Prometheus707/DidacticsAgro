@@ -5,7 +5,8 @@ session_start();
 <?php
    require_once("../conexiondb.php");
 
-
+  
+   include('../include/parametros.php');
 
 /* codigo de cerrar sesion */
   if(($_SESSION['idUsuario'])!=''){
@@ -102,7 +103,7 @@ session_start();
     </div>
   </div>
 
-  <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0">Navegación</p>
+
 
   <ul class="nav flex-column bg-white mb-0">
     <li class="nav-item" id="padre5">
@@ -114,13 +115,13 @@ session_start();
 
             <li class="nav-item"  id="padre">
               <a href="rompehielo.php" id="miBoton" class="nav-link ">
-                        <i     id="otro_div" class="far fa-file-alt  mr-3  fa-fw navimmg " style=""></i>
+                        <i     id="otro_div" class="far fa-file-alt  mr-3  fa-fw navimmg " ></i>
                         Descubra más aquí
                     </a>
             </li>
 
             <li class="nav-item"  id="padrep">
-              <a href="usuario.php" id="miBoton" class="nav-link " style="background:#ff6b00; color:white">
+              <a href="usuario.php" id="miBoton" class="nav-link " style="background:<?php echo $var_color_sena; ?>; color:white">
                         <i     id="otro_div3" class="fa fa-address-card text-white  mr-3  fa-fw navimmg "></i>
                         Usuarios
                     </a>
@@ -305,38 +306,39 @@ session_start();
  </div>
 
 
-      <div class="bg-white p-5 rounded my-5 shadow-sm">
-        <p class="lead font-italic mb-0 text-muted">"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+      <div class="bg-white p-5 rounded my-5 ">
+        <!-- <p class="lead font-italic mb-0 text-muted">"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p> -->
       </div>
 
       <div class="bg-white p-0 rounded my-10 shadow-lg">
-     <footer>
+      <footer style="background-color: <?php echo $var_color_sena; ?>;">
 
-			 <div class="divFp">
+<div class="divFp" style="background-color: <?php echo $var_color_sena; ?>;">
 
-				  <div class="div1F">
-							<img src="../imagenes/sena3.png"  class="imagfooter" >
+  <div class="div1F">
+    <img src="../imagenes/sena3.png" class="imagfooter">
 
-			     </div>
-
-
+  </div>
 
 
-				<div class="div3F">
 
-              Centro Agropecuario Regional Cauca <br>
-Dirección: Cr 9 No 71 N 60, Alto del Cauca - Kilómetro 7 vía a Cali<br>
-Teléfono: (2) 8247678 IP: 22112 Fax: (2) 8247678<br>
-Correo: agropecuario@misena.edu.co
 
-      		     </div>
+  <div class="div3F">
 
-				 <div class="div2F">
-                      	<img src="../imagenes/SENOVA.png"  class="imag2footer" >
-				</div>
-			</div>
-   </footer>
+    Centro Agropecuario Regional Cauca <br>
+    Dirección: Cr 9 No 71 N 60, Alto del Cauca - Kilómetro 7 vía a Cali<br>
+    Teléfono: (2) 8247678 IP: 22112 Fax: (2) 8247678<br>
+    Correo: agropecuario@misena.edu.co
+
+  </div>
+
+  <div class="div2F">
+    <!-- <img src="images/SENOVA.png" class="imag2footer"> -->
+    <img src="../images/LOGOsENNOVA.png" class="imag2footer">
+  </div>
+</div>
+</footer>
    </div>
 
   </div>

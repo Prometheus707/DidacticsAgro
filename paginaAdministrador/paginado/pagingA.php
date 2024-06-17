@@ -30,12 +30,12 @@ $count="SELECT COUNT(*) FROM tda where idTipoTdas='3'";
   echo "<table border='1' class='table table-bordered table-hover'>";
   echo "<thead>";
   echo "<tr>";
-  echo "<th class='t2'>Nombre</th>";
+  echo "<th class='t2' style='background:#29a900; color:white;'>Nombre</th>";
 
-  echo "<th class='t3'>Descripción</th>";
-  echo "<th class='t5'>Archivo</th>";
-  echo "<th class='t6'>Actualizar</th>";
-  echo "<th class='t6'>Eliminar</th>";
+  echo "<th class='t3' style='background:#29a900; color:white;'>Descripción</th>";
+  echo "<th class='t5' style='background:#29a900; color:white;'>Archivo</th>";
+  echo "<th class='t6' style='background:#29a900; color:white;'>Actualizar</th>";
+  echo "<th class='t6' style='background:#29a900; color:white;'>Eliminar</th>";
   echo "</tr>";
   echo "</thead>";
   echo "<tbody>";

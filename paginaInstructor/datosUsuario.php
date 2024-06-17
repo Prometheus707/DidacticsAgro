@@ -3,7 +3,7 @@ session_start();
  ?>
 <?php
    require_once("../conexiondb.php");
-
+   include("../include/parametros.php");
 
 
 /* codigo de cerrar sesion */
@@ -163,7 +163,7 @@ else
             </a>
     </li>
      <li class="nav-item" >
-      <a style="	background:#Ff6b00 ;" href="#" id="miBoton" class="nav-link text-white  ">
+      <a style="	background:<?php echo $var_color_sena; ?>; color:white" href="#" id="miBoton" class="nav-link text-white  ">
                 <i style="	color:white ;" class="fa fa-address-card  mr-3  fa-fw navimmg "></i>
                Mis Datos
             </a>
@@ -398,32 +398,33 @@ Cambiar contraseña
 	 </div>
       	
    <div class="bg-white p-0 rounded my-10 shadow-lg">
-           <footer>
-	
-			 <div class="divFp">  
-				  
-				  <div class="div1F">
-							<img src="../imagenes/sena3.png"  class="imagfooter" >  
+   <footer style="background-color: <?php echo $var_color_sena; ?>;">
 
-			     </div>
-				
-						  
+<div class="divFp" style="background-color: <?php echo $var_color_sena; ?>;">
 
-		
-				<div class="div3F">
-    
-              Centro Agropecuario Regional Cauca <br>
-Dirección: Cr 9 No 71 N 60, Alto del Cauca - Kilómetro 7 vía a Cali<br>
-Teléfono: (2) 8247678 IP: 22112 Fax: (2) 8247678<br>
-Correo: agropecuario@misena.edu.co
-      
-      		     </div>
-				 
-				 <div class="div2F">
-                      	<img src="../imagenes/SENOVA.png"  class="imag2footer" >  
-				</div>
-			</div>
-   </footer>
+  <div class="div1F">
+    <img src="../imagenes/sena3.png" class="imagfooter">
+
+  </div>
+
+
+
+
+  <div class="div3F">
+
+    Centro Agropecuario Regional Cauca <br>
+    Dirección: Cr 9 No 71 N 60, Alto del Cauca - Kilómetro 7 vía a Cali<br>
+    Teléfono: (2) 8247678 IP: 22112 Fax: (2) 8247678<br>
+    Correo: agropecuario@misena.edu.co
+
+  </div>
+
+  <div class="div2F">
+    <!-- <img src="images/SENOVA.png" class="imag2footer"> -->
+    <img src="../images/LOGOsENNOVA.png" class="imag2footer">
+  </div>
+</div>
+</footer>
    </div>    
 
   </div>

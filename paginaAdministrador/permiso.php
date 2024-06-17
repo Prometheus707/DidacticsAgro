@@ -15,7 +15,7 @@
   $id = $_GET['id'];
   $consulta = "SELECT * FROM usuario inner join estado on estado.idEstado=usuario.estado inner join rol on rol.idRol=usuario.idRol where docUsuario=" . $id;
   $resultado = $conecta->query($consulta);
-
+  include("../include/parametros.php");
 
   if ($resultado->num_rows > 0) {
     $fila = $resultado->fetch_assoc();
@@ -28,7 +28,7 @@
         <hr>
         <form class="" action="permiso2.php" method="post">
 
-          <p style="padding-left: 2%;font-size:25px; text-align: center;color: #f2740b">Por favor seleccione permisos de usuario</p>
+          <p style="padding-left: 2%;font-size:25px; text-align: center;color:<?php echo $var_color_sena; ?>">Por favor seleccione permisos de usuario</p>
           <!---- select de estado de usuario ------->
 
           <div style="padding-left:10%;font-size:20px">

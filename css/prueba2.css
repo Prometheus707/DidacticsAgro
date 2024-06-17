@@ -1,29 +1,34 @@
 #miBoton { 
   padding:9px ; 
   background: light-gray; 
-color:black;
+  color:black;
 
 } 
  
 #miBoton:hover { 
   padding: 9px; 
-  background-color: #Ff6b00;
+  background-color: #29a900;
    color: white; 
  border-top: #E3DCDA  1px solid;
  border-bottom: #E3DCDA  1px solid;
 } 
 #miBoton:active { 
   padding:10px; 
-   background-color: #ff531a;
-  color: white; 
+   background-color: #29a900;
+  color: black; 
   
 }
 .navimmg{
 	
-	 color: #Ff6b00;
+	 color:  black;
 	
 }
 
+
+.navimmg:hover{
+  color: white;
+ 
+}
 
 
 

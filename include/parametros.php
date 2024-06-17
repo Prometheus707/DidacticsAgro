@@ -1,6 +1,6 @@
 <?php 
 
-  $var_color_sena = "#29A900";
+  $var_color_sena = "#29a900";
 
 
 ?>

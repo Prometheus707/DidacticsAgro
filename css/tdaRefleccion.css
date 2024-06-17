@@ -7,9 +7,9 @@ color:black
  
 #miBoton:hover{ 
   padding: 9px; 
-  background: #Ff6b00; 
-   color: white; 
- border-top: #E3DCDA  1px solid;
+  background: #29a900; 
+  color: white; 
+  border-top: #E3DCDA  1px solid;
 } 
 #miBoton:active { 
   padding:9px; 
@@ -17,11 +17,7 @@ color:black
   color: white; 
   
 }
-.navimmg{
-	
-	 color: #Ff6b00;
-	 
-}
+
 
  .navimmg:hover{
 		  color: white;

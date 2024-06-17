@@ -4,7 +4,7 @@ mysqli_set_charset($conecta,"utf8");
 $id=$_GET['id'];
 $consulta = "SELECT * FROM tda inner join tipotda on tda.idTipoTdas=tipotda.idTipoTda where idTda=".$id;
 $resultado = $conecta->query($consulta);
-
+include('../include/parametros.php');
 
 if ($resultado->num_rows > 0){
     $fila = $resultado->fetch_assoc();
@@ -27,7 +27,7 @@ if ($resultado->num_rows > 0){
   <body>
 
     <main class="pequeña">
-<div style="background:#Ff6b00; ">
+<div style="background:<?php echo $var_color_sena; ?>; ">
     <center><img src="../imagenes/logo3.png" alt="logo"  style=" max-width:20%; min-width:20%;"></center>
 </div>
 
@@ -62,7 +62,7 @@ if ($resultado->num_rows > 0){
 
 	<br>
 
-<p style='color: #f2740b' >  Cargue nuevamente el archivo de técnica didáctica activa <?php echo $fila['rutaPDF']; ?> </p><input type="file" style="width: 80%;"  class="form-control"  name="archivo" value="<?php echo $fila['descripcionTda']; ?>" id="archivoInput" onchange="return validarExt()" required>
+<p style='color: <?php echo $var_color_sena ?>' >  Cargue nuevamente el archivo de técnica didáctica activa <?php echo $fila['rutaPDF']; ?> </p><input type="file" style="width: 80%;"  class="form-control"  name="archivo" value="<?php echo $fila['descripcionTda']; ?>" id="archivoInput" onchange="return validarExt()" required>
 <br>
 
 						<br>	<p>Componente: </p>
@@ -75,7 +75,7 @@ if ($resultado->num_rows > 0){
         <option value="4">TRANSFERENCIA DE CONOCIMIENTO</option>
       </select><br><br>
 
-      <p style='color: #f2740b' >  Cargue nuevamente el archivo de anexo <?php echo $fila['enlace']; ?> </p><input type="file" style="width: 80%;"  class="form-control"  name="enlace" value="<?php echo $fila['enlace']; ?>" >
+      <p style='color: <?php echo $var_color_sena ?>' >  Cargue nuevamente el archivo de anexo <?php echo $fila['enlace']; ?> </p><input type="file" style="width: 80%;"  class="form-control"  name="enlace" value="<?php echo $fila['enlace']; ?>" >
       <br>
      <div id="visorArchivo">
       <!--Aqui se desplegará el fichero-->
@@ -109,32 +109,33 @@ if ($resultado->num_rows > 0){
     </main>
 
 
- <footer style="margin-top:-6%;">
+    <footer style="background-color: <?php echo $var_color_sena; ?>;  margin-top:-5%;">
 
-			 <div class="divFp">
+<div class="divFp" style="background-color: <?php echo $var_color_sena; ?>;">
 
-				  <div class="div1F">
-							<img src="../imagenes/sena3.png"  class="imagfooter" >
+  <div class="div1F">
+    <img src="../imagenes/sena3.png" class="imagfooter">
 
-			     </div>
-
-
+  </div>
 
 
-				<div class="div3F">
 
-              Centro Agropecuario Regional Cauca <br>
-Dirección: Cr 9 No 71 N 60, Alto del Cauca - Kilómetro 7 vía a Cali<br>
-Teléfono: (2) 8247678 IP: 22112 Fax: (2) 8247678<br>
-Correo: agropecuario@misena.edu.co
 
-      		     </div>
+  <div class="div3F">
 
-				 <div class="div2F">
-                      	<img src="../imagenes/SENOVA.png"  class="imag2footer" >
-				</div>
-			</div>
-   </footer>
+    Centro Agropecuario Regional Cauca <br>
+    Dirección: Cr 9 No 71 N 60, Alto del Cauca - Kilómetro 7 vía a Cali<br>
+    Teléfono: (2) 8247678 IP: 22112 Fax: (2) 8247678<br>
+    Correo: agropecuario@misena.edu.co
+
+  </div>
+
+  <div class="div2F">
+    <!-- <img src="images/SENOVA.png" class="imag2footer"> -->
+    <img src="../images/LOGOsENNOVA.png" class="imag2footer">
+  </div>
+</div>
+</footer>
    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
    <script src="js/main.js"></script>
   </body>

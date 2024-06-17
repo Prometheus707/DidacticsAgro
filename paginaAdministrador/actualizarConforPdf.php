@@ -4,7 +4,7 @@ mysqli_set_charset($conecta,"utf8");
 $id=$_GET['id'];
 $consulta = "SELECT * FROM conformargpdf where idConforPdf=".$id;
 $resultado = $conecta->query($consulta);
-
+include('../include/parametros.php');
 
 if ($resultado->num_rows > 0){
     $fila = $resultado->fetch_assoc();
@@ -25,7 +25,7 @@ if ($resultado->num_rows > 0){
   <body>
 
     <main class="pequeña">
-     <div style="background:#Ff6b00; ">
+     <div style="background:<?php echo $var_color_sena; ?>; ">
     <center><img src="../imagenes/logo3.png" alt="logo"  style=" max-width:20%; min-width:20%;"></center>
 </div>
 
@@ -75,7 +75,7 @@ if ($resultado->num_rows > 0){
 
         <div style="margin-left:20%;">
       <input type="submit" class='btn  btn-success btn-sm' style="width:32%; font-size:2vh; " name="" value="Actualizar">
-      <a href="tdaCierres.php"><button type="button" class='btn  btn-danger btn-sm' style="width:32%; font-size:2vh;" name="button">Cancelar</button></a>
+      <a href="tdaEquipos.php"><button type="button" class='btn  btn-danger btn-sm' style="width:32%; font-size:2vh;" name="button">Cancelar</button></a>
       </div>
 
 
@@ -86,32 +86,34 @@ if ($resultado->num_rows > 0){
     </main>
 
 
- <footer style="margin-top:-6%;">
+  
+    <footer style="background-color: <?php echo $var_color_sena; ?>; margin-top:-5%;">
 
-			 <div class="divFp">
+<div class="divFp" style="background-color: <?php echo $var_color_sena; ?>;">
 
-				  <div class="div1F">
-							<img src="../imagenes/sena3.png"  class="imagfooter" >
+  <div class="div1F">
+    <img src="../imagenes/sena3.png" class="imagfooter">
 
-			     </div>
-
-
+  </div>
 
 
-				<div class="div3F">
 
-              Centro Agropecuario Regional Cauca <br>
-Dirección: Cr 9 No 71 N 60, Alto del Cauca - Kilómetro 7 vía a Cali<br>
-Teléfono: (2) 8247678 IP: 22112 Fax: (2) 8247678<br>
-Correo: agropecuario@misena.edu.co
 
-      		     </div>
+  <div class="div3F">
 
-				 <div class="div2F">
-                      	<img src="../imagenes/SENOVA.png"  class="imag2footer" >
-				</div>
-			</div>
-   </footer>
+    Centro Agropecuario Regional Cauca <br>
+    Dirección: Cr 9 No 71 N 60, Alto del Cauca - Kilómetro 7 vía a Cali<br>
+    Teléfono: (2) 8247678 IP: 22112 Fax: (2) 8247678<br>
+    Correo: agropecuario@misena.edu.co
+
+  </div>
+
+  <div class="div2F">
+    <!-- <img src="images/SENOVA.png" class="imag2footer"> -->
+    <img src="../images/LOGOsENNOVA.png" class="imag2footer">
+  </div>
+</div>
+</footer>
    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
    <script src="js/main.js"></script>
   </body>

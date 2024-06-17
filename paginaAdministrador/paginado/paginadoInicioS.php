@@ -23,11 +23,11 @@ $count="SELECT COUNT(*) FROM iniciosesion";
  mysqli_set_charset($conecta,"utf8");
   echo "<table border='1'  class='table table-bordered table-hover'>
                   <thead> <tr>
-                   <th class='nt2' >Nombre</th>
-                   <th class='nt3'>Descripción</th>
-                	<th class='nt4'>Pdf</th>
-                  <th class='nt4'>Actualizar</th>
-                  <th class='nt4'>Eliminar</th>
+                   <th class='nt2'  style='background:#29a900; color:white;'>Nombre</th>
+                   <th class='nt3' style='background:#29a900; color:white;'>Descripción</th>
+                	<th class='nt4' style='background:#29a900; color:white;'>Pdf</th>
+                  <th class='nt4' style='background:#29a900; color:white;'>Actualizar</th>
+                  <th class='nt4' style='background:#29a900; color:white;'>Eliminar</th>
 
 
                   </tr>

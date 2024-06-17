@@ -4,7 +4,7 @@ session_start();
 
 <?php
    require_once("../conexiondb.php");
-
+  include('../include/parametros.php');
 
 
 /* codigo de cerrar sesion */
@@ -27,48 +27,61 @@ session_start();
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    
 
 <link href="../css/plantillaAdmin.css" rel="stylesheet">
-   <script type="text/javascript">
-        $(function() {
-          $('#padre > a').hover(function() {
-            $('#otro_div').css('color', 'white');
-          }, function() {
-            // vuelve a dejar el <div> como estaba al hacer el "mouseout"
-            $('#otro_div').css('color', '');
-          });
-        });
-    </script>  <script type="text/javascript">
-        $(function() {
-          $('#padre2 > a').hover(function() {
-            $('#otro_div2').css('color', 'white');
-          }, function() {
-            // vuelve a dejar el <div> como estaba al hacer el "mouseout"
-            $('#otro_div2').css('color', '');
-          });
-        });
-    </script>
-    <script type="text/javascript">
-         $(function() {
-           $('#padrep > a').hover(function() {
-             $('#otro_div3').css('color', 'white');
-           }, function() {
-             // vuelve a dejar el <div> como estaba al hacer el "mouseout"
-             $('#otro_div3').css('color', '');
-           });
-         });
-     </script>
-     <script type="text/javascript">
-          $(function() {
-            $('#padre4 > a').hover(function() {
-              $('#otro_div4').css('color', 'white');
-            }, function() {
-              // vuelve a dejar el <div> como estaba al hacer el "mouseout"
-              $('#otro_div4').css('color', '');
-            });
-          });
-      </script>
+<script type="text/javascript">
+  $(function() {
+    $('#padre > a').hover(function() {
+      $(this).css('background-color', '#29A900');
+      $(this).find('#otro_div').css('color', 'white');
+    }, function() {
+      $(this).css('background-color', '');
+      $(this).find('#otro_div').css('color', '');
+    });
+  });
+
+  $(function() {
+    $('#padre2 > a').hover(function() {
+      $(this).css('background-color', '#29A900');
+      $(this).find('#otro_div2').css('color', 'white');
+    }, function() {
+      $(this).css('background-color', '');
+      $(this).find('#otro_div2').css('color', '');
+    });
+  });
+
+  $(function() {
+    $('#padrep > a').hover(function() {
+      $(this).css('background-color', '#29A900');
+      $(this).find('#otro_div3').css('color', 'white');
+    }, function() {
+      $(this).css('background-color', '');
+      $(this).find('#otro_div3').css('color', '');
+    });
+  });
+
+  $(function() {
+    $('#padre4 > a').hover(function() {
+      $(this).css('background-color', '#29A900');
+      $(this).find('#otro_div4').css('color', 'white');
+    }, function() {
+      $(this).css('background-color', '');
+      $(this).find('#otro_div4').css('color', '');
+    });
+  });
+</script>
    
+  <!-- <script type="text/javascript">
+  $(function() {
+    $('.hover-link').hover(function() {
+      $(this).find('.hover-icon').css('color', 'white');
+    }, function() {
+      $(this).find('.hover-icon').css('color', '');
+    });
+  });
+</script> -->
+
 
 
 
@@ -82,12 +95,9 @@ session_start();
       </div>
     </div>
   </div>
-
-  <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0">Navegación</p>
-
   <ul class="nav flex-column bg-white mb-0">
     <li class="nav-item">
-      <a style="	background:#Ff6b00 ;" href="administrador.php" id="miBoton" class="nav-link text-white ">
+      <a style="background:<?php echo $var_color_sena; ?>;" href="administrador.php" id="miBoton" class="nav-link text-white ">
                 <i style="	color:white ;"  class="fa fa-th-large mr-3  fa-fw"></i>
                 Técnicas Didácticas
             </a>
@@ -95,7 +105,7 @@ session_start();
 
             <li class="nav-item"  id="padre">
               <a href="rompehielo.php" id="miBoton" class="nav-link ">
-                        <i     id="otro_div" class="far fa-file-alt  mr-3  fa-fw navimmg " style=""></i>
+                        <i     id="otro_div" class="far fa-file-alt  mr-3  fa-fw navimmg " ></i>
                         Descubra más aquí
                     </a>
             </li>
@@ -173,14 +183,14 @@ session_start();
         <center>
 
 						   <img src="../images/end.png" width="39.9%" ><br>
-                        <a href="tdaReflexion.php">   <button type="button" style="background:#ff6b00;color:white;font-size:17px" class="btn btn-outline-light my-2 my-sm-0 botonInicio" id="myBtn3">Reflexión inicial</button></a>
+                        <a href="tdaReflexion.php">   <button type="button" style="background:<?php echo $var_color_sena; ?>;color:white;font-size:17px" class="btn btn-outline-light my-2 my-sm-0 botonInicio" id="myBtn3">Reflexión inicial</button></a>
 				<br>  <br>
 
 				  </center>
   <img src="../images/tres.png " width="15.8%" >
 		<center>
 							<img src="../images/inicio.png" width="40%" ><br><br>
-							<a href="tdaApropiacion.php" > <button  type="button" style="background:#ff6b00;color:white;font-size:17px" class="btn btn-outline-light my-2 my-sm-0 botonInicio1" >Apropiación del conocimiento </button> </a>
+							<a href="tdaApropiacion.php" > <button  type="button" style="background:<?php echo $var_color_sena; ?>;color:white;font-size:17px" class="btn btn-outline-light my-2 my-sm-0 botonInicio1" >Apropiación del conocimiento </button> </a>
 
       </center>
       </div>
@@ -206,14 +216,14 @@ session_start();
              <img src="../images/dos.png " width="15.9%" ><br>
           <center>
 					   	<img src="../images/desarrollo.png " width="37%" ><br>
-                               <a href="tdaIdentificacion.php" > <button style="background:#ff6b00;color:white;font-size:17px" class="btn btn-outline-light my-2 my-sm-0 botonInicio" type="button"  > Contextualización e identificación del conocimiento </button> </a>
+                               <a href="tdaIdentificacion.php" > <button style="background:<?php echo $var_color_sena; ?>;color:white;font-size:17px" class="btn btn-outline-light my-2 my-sm-0 botonInicio" type="button"  > Contextualización e identificación del conocimiento </button> </a>
 
                              	<br>	<br>
         </center>
 <img src="../images/cuatro.png " width="16.2%" ><br>
 		<center>
 							    <img src="../images/evalua.png" width="39%" style="padding-bottom: 3%">
-							   <a href="tdaTransferencia.php"> <button type="button" style="background:#ff6b00;color:white;font-size:17px" class="btn btn-outline-light my-2 my-sm-0 botonInicio" >Transferencia del conocimiento </button> </a>
+							   <a href="tdaTransferencia.php"> <button type="button" style="background:<?php echo $var_color_sena; ?>;color:white;font-size:17px" class="btn btn-outline-light my-2 my-sm-0 botonInicio" >Transferencia del conocimiento </button> </a>
 
 
 
@@ -242,32 +252,33 @@ session_start();
     
 
       <div class="bg-white p-0 rounded my-10 shadow-lg">
-        <footer>
+      <footer style="background-color: <?php echo $var_color_sena; ?>;">
 
-			 <div class="divFp">
+<div class="divFp" style="background-color: <?php echo $var_color_sena; ?>;">
 
-				  <div class="div1F">
-							<img src="../imagenes/sena3.png"  class="imagfooter" >
+  <div class="div1F">
+    <img src="../imagenes/sena3.png" class="imagfooter">
 
-			     </div>
-
-
+  </div>
 
 
-				<div class="div3F">
 
-              Centro Agropecuario Regional Cauca <br>
-Dirección: Cr 9 No 71 N 60, Alto del Cauca - Kilómetro 7 vía a Cali<br>
-Teléfono: (2) 8247678 IP: 22112 Fax: (2) 8247678<br>
-Correo: agropecuario@misena.edu.co
 
-      		     </div>
+  <div class="div3F">
 
-				 <div class="div2F">
-                      	<img src="../imagenes/SENOVA.png"  class="imag2footer" >
-				</div>
-			</div>
-   </footer>
+    Centro Agropecuario Regional Cauca <br>
+    Dirección: Cr 9 No 71 N 60, Alto del Cauca - Kilómetro 7 vía a Cali<br>
+    Teléfono: (2) 8247678 IP: 22112 Fax: (2) 8247678<br>
+    Correo: agropecuario@misena.edu.co
+
+  </div>
+
+  <div class="div2F">
+    <!-- <img src="images/SENOVA.png" class="imag2footer"> -->
+    <img src="../images/LOGOsENNOVA.png" class="imag2footer">
+  </div>
+</div>
+</footer>
    </div>
 
   </div>

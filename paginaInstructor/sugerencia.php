@@ -3,7 +3,7 @@ session_start();
  ?>
 <?php
    require_once("../conexiondb.php");
-
+   include("../include/parametros.php");
 
 
 /* codigo de cerrar sesion */
@@ -118,7 +118,7 @@ session_start();
 
 
  <li class="nav-item">
-      <a href="#"  style="	background:#Ff6b00 ;" href="#" id="miBoton" class="nav-link text-white ">
+      <a href="#"  style="	background:<?php echo $var_color_sena; ?>;" href="#" id="miBoton" class="nav-link text-white ">
                 <i style="	color:white ;"  class="fa fa-th-large mr-3  fa-fw"></i>
                 Sugerencias
             </a>
@@ -170,12 +170,12 @@ session_start();
      	echo "<table class='table'>
 				 <thead>
 				<tr>
-		<th style='font-size:3vh;font-weight: 400; background:#Ff6b00;' >Sugerencia</th>
-       <th  style='font-size:3vh;font-weight: 400; background:#Ff6b00;'>Fecha</th>
-       <th  style='font-size:3vh;font-weight: 400; background:#Ff6b00;' >Respuesta</th>
-       <th  style='font-size:3vh;font-weight: 400; background:#Ff6b00;' >Comentario</th>
-       <th  style='font-size:3vh;font-weight: 400; background:#Ff6b00;' >Archivo</th>
-       <th style='font-size:3vh;font-weight: 400; background:#Ff6b00;' >Eliminar</th>
+		<th style='font-size:3vh;font-weight: 400; background:#29a900; color:white;' >Sugerencia</th>
+       <th  style='font-size:3vh;font-weight: 400; background:#29a900;color:white;'>Fecha</th>
+       <th  style='font-size:3vh;font-weight: 400; background:#29a900;color:white;' >Respuesta</th>
+       <th  style='font-size:3vh;font-weight: 400; background:#29a900;color:white;' >Comentario</th>
+       <th  style='font-size:3vh;font-weight: 400; background:#29a900;color:white;' >Archivo</th>
+       <th style='font-size:3vh;font-weight: 400; background:#29a900;color:white;' >Eliminar</th>
 
 </thead>
 
@@ -281,32 +281,33 @@ function ConfirmDelet()
 }
 </script>
   <div class="bg-white p-0 rounded my-10 shadow-lg">
-           <footer>
-	
-			 <div class="divFp">  
-				  
-				  <div class="div1F">
-							<img src="../imagenes/sena3.png"  class="imagfooter" >  
+  <footer style="background-color:<?php echo $var_color_sena; ?>;">
 
-			     </div>
-				
-						  
+<div class="divFp" style="background-color: <?php echo $var_color_sena; ?>;">
 
-		
-				<div class="div3F">
-    
-              Centro Agropecuario Regional Cauca <br>
-Dirección: Cr 9 No 71 N 60, Alto del Cauca - Kilómetro 7 vía a Cali<br>
-Teléfono: (2) 8247678 IP: 22112 Fax: (2) 8247678<br>
-Correo: agropecuario@misena.edu.co
-      
-      		     </div>
-				 
-				 <div class="div2F">
-                      	<img src="../imagenes/SENOVA.png"  class="imag2footer" >  
-				</div>
-			</div>
-   </footer>
+  <div class="div1F">
+    <img src="../imagenes/sena3.png" class="imagfooter">
+
+  </div>
+
+
+
+
+  <div class="div3F">
+
+    Centro Agropecuario Regional Cauca <br>
+    Dirección: Cr 9 No 71 N 60, Alto del Cauca - Kilómetro 7 vía a Cali<br>
+    Teléfono: (2) 8247678 IP: 22112 Fax: (2) 8247678<br>
+    Correo: agropecuario@misena.edu.co
+
+  </div>
+
+  <div class="div2F">
+    <!-- <img src="images/SENOVA.png" class="imag2footer"> -->
+    <img src="../images/LOGOsENNOVA.png" class="imag2footer">
+  </div>
+</div>
+</footer>
    </div>    
 
   </div>

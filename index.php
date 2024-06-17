@@ -1,5 +1,6 @@
 <?php
 session_start();
+include('include/parametros.php');
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -118,7 +119,7 @@ session_start();
 
   <div>
 
-    <nav class="navbar navbar-expand-lg  navbar-dark nav3" style="background-color: #39A900;">
+    <nav class="navbar navbar-expand-lg  navbar-dark nav3" style="background-color:<?php echo $var_color_sena; ?>">
       <a class="navbar-brand" href="#"> <img src="images/logo33.png" width="215" alt="logo"> </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -397,12 +398,12 @@ session_start();
             <div class="tablaGrupo">
 
               <table class="width200">
-                <thead style="background-color: #39A900;">
+                <thead style="background-color: <?php echo $var_color_sena; ?>;">
                   <tr >
-                    <th class="t5" style="background-color: #39A900; color: white;"> </th>
-                    <th class="t2" style="background-color: #39A900; color: white;">AUTORES </th>
-                    <th class="t3" style="background-color: #39A900; color: white;">ROL</th>
-                    <th class="t4" style="background-color: #39A900; color: white;">CONTACTO</th>
+                    <th class="t5" style="background-color: <?php echo $var_color_sena; ?>; color: white;"> </th>
+                    <th class="t2" style="background-color:<?php echo $var_color_sena; ?>; color: white;">AUTORES </th>
+                    <th class="t3" style="background-color: <?php echo $var_color_sena; ?>; color: white;">ROL</th>
+                    <th class="t4" style="background-color: <?php echo $var_color_sena; ?>; color: white;">CONTACTO</th>
 
                   </tr>
                 </thead>
@@ -517,7 +518,7 @@ session_start();
         <!-- About Card -->
 
         <div class="w3-white w3-margin" style="border-radius: 1rem;">
-          <div class="w3-container w3-padding color" style="background-color: #39A900;">
+          <div class="w3-container w3-padding color" style="background-color: <?php echo $var_color_sena; ?>;">
             <h4>Reflexión</h4>
           </div>
           <div class="w3-container w3-white">
@@ -530,7 +531,7 @@ session_start();
         <hr>
         <!-- Posts -->
         <div class="w3-white w3-margin">
-          <div class="w3-container w3-padding color" style="background-color: #39A900;">
+          <div class="w3-container w3-padding color" style="background-color: <?php echo $var_color_sena; ?>;">
             <h4>Acceso Rápido</h4>
           </div>
           <ul class="w3-ul w3-hoverable w3-white">
@@ -552,7 +553,7 @@ session_start();
         <hr>
         <!-- Inspiration -->
         <div class="w3-white w3-margin">
-          <div class="w3-container w3-padding color " style="background-color: #39A900;">
+          <div class="w3-container w3-padding color " style="background-color: <?php echo $var_color_sena; ?>;">
             <h4>Inspiración</h4>
           </div>
           <div class="w3-row-padding w3-white">
@@ -600,9 +601,9 @@ session_start();
       <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>Subir</a>
 
     </div>
-    <footer style="background-color: #39A900;">
+    <footer style="background-color: <?php echo $var_color_sena; ?>;">
 
-      <div class="divFp" style="background-color: #39A900;">
+      <div class="divFp" style="background-color: <?php echo $var_color_sena; ?>;">
 
         <div class="div1F">
           <img src="imagenes/sena3.png" class="imagfooter">

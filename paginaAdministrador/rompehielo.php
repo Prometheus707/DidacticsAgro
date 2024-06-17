@@ -4,7 +4,7 @@ session_start();
 
 <?php
    require_once("../conexiondb.php");
-
+   include("../include/parametros.php");
 
 
 /* codigo de cerrar sesion */
@@ -27,6 +27,7 @@ session_start();
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    
 
 <link href="../css/plantillaAdmin.css" rel="stylesheet">
    <script type="text/javascript">
@@ -89,19 +90,16 @@ session_start();
       </div>
     </div>
   </div>
-
-  <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0">Navegación</p>
-
   <ul class="nav flex-column bg-white mb-0">
     <li class="nav-item" id="padre5">
       <a  href="administrador.php" id="miBoton" class="nav-link " >
-                <i  style="color:#ff6b00" id="div5" class="fa fa-th-large mr-3  fa-fw"></i>
+                <i   id="div5" class="fa fa-th-large mr-3  fa-fw"></i>
                 Técnicas Didácticas
             </a>
         </li>
             <li class="nav-item"  id="padre">
-              <a href="rompehielo.php" id="miBoton" class="nav-link " style="background:#Ff6b00 ;color:white">
-                        <i     id="otro_div" class="far fa-file-alt  mr-3 rh text-white fa-fw navimmg " style=""></i>
+              <a href="rompehielo.php" id="miBoton" class="nav-link " style="background:<?php echo $var_color_sena; ?>;color:white">
+                        <i     id="otro_div" class="far fa-file-alt  mr-3 rh text-white fa-fw navimmg " ></i>
                         Descubra más aquí
                     </a>
             </li>
@@ -164,7 +162,7 @@ La motivación es un factor que debe ser tenido en cuenta por centros educativos
 
 
 
-<div class="w3-content w3-white" style="width:100%; display:block">
+<div class="w3-content w3-white" style="width:100%; display:block; margin-bottom:1.5rem;">
 
   <!-- Grid -->
   <div class="w3-row w3-padding w3-border">
@@ -185,13 +183,13 @@ La motivación es un factor que debe ser tenido en cuenta por centros educativos
              <img src="../images/uno.png " width="12%" >  <center>
 
      <img src="../images/sesion.png" width="26%" ><br><br>
-           <a href="iniciosesion.php">   <button type="button" style="background:#ff6b00;color:white;font-size:17px" class="btn btn-outline-light my-2 my-sm-0 botonInicio" id="myBtn3"> Inicio de sesión</button></a>
+           <a href="iniciosesion.php">   <button type="button" style="background:<?php echo $var_color_sena; ?>;color:white;font-size:17px" class="btn btn-outline-light my-2 my-sm-0 botonInicio" id="myBtn3"> Inicio de sesión</button></a>
      <br>  <br>
      </center>
     <img src="../images/tres.png " width="15.8%" > <center><br><br>
                      <img src="../images/c.png" width="42%" ><br><br>
                      <div class="" style="margin-top: 1.5%">
-                        <a href="tdaEquipos.php"> <button style="background:#ff6b00;color:white;font-size:17px" type="button" class="btn btn-outline-light my-2 my-sm-0 botonInicio" >Formas de conformar grupos
+                        <a href="tdaEquipos.php"> <button style="background:<?php echo $var_color_sena; ?>;color:white;font-size:17px" type="button" class="btn btn-outline-light my-2 my-sm-0 botonInicio" >Formas de conformar grupos
 </button> </a>
                      </div>
 
@@ -199,7 +197,7 @@ La motivación es un factor que debe ser tenido en cuenta por centros educativos
       <img style="margin-left:-12px" src="../images/cinco.png " width="26%" > <center><br>
 
                    <img src="../images/jolt.png" width="48%" ><br><br>
-               <a href="tdaJolts.php" > <button style="background:#ff6b00;color:white;font-size:17px" type="button" class="btn btn-outline-light my-2 my-sm-0 botonInicio1" > Jolts y Motivadores </button> </a>
+               <a href="tdaJolts.php" > <button style="background:<?php echo $var_color_sena; ?>;color:white;font-size:17px" type="button" class="btn btn-outline-light my-2 my-sm-0 botonInicio1" > Jolts y Motivadores </button> </a>
 
         </center>
 
@@ -227,20 +225,20 @@ La motivación es un factor que debe ser tenido en cuenta por centros educativos
     <img src="../images/dos.png " width="15.9%" >  <center>
 
             <img src="../images/cerebro.png" width="23.5%" ><br><br>
-                      <a href="tdaRompe.php">   <button style="background:#ff6b00;color:white;font-size:17px" type="button" class="btn btn-outline-light my-2 my-sm-0 botonInicio" id="myBtn3">Rompe hielos</button></a>
+                      <a href="tdaRompe.php">   <button style="background:<?php echo $var_color_sena; ?>;color:white;font-size:17px" type="button" class="btn btn-outline-light my-2 my-sm-0 botonInicio" id="myBtn3">Rompe hielos</button></a>
       <br>  <br>
         </center>
         <img src="../images/cuatro.png " width="16.2%" >
         <center>
       <img src="../images/positivo.png" width="45%" ><br><br>
-                           <a href="frases.php" > <button  style="background:#ff6b00;color:white;font-size:17px" class="btn btn-outline-light my-2 my-sm-0 botonInicio" type="button"  > Frases en positivo para usar</button> </a>
+                           <a href="frases.php" > <button  style="background:<?php echo $var_color_sena; ?>;color:white;font-size:17px" class="btn btn-outline-light my-2 my-sm-0 botonInicio" type="button"  > Frases en positivo para usar</button> </a>
                            <br><br>
     </center>
         <img src="../images/six.png " width="24%" >  <center>
 
 	   <img src="../images/estrcturada.png" width="61.9%" ><br>
                           <div class="" style="margin-top:3.5%">
-                          <a href="tdaCierres.php" > <button style="background:#ff6b00;color:white;font-size:17px" class="btn btn-outline- my-2 my-sm-0 botonInicio" type="button"  >Reflexiones estructuradas y Cierres </button> </a>
+                          <a href="tdaCierres.php" > <button style="background:<?php echo $var_color_sena; ?>;color:white;font-size:17px" class="btn btn-outline- my-2 my-sm-0 botonInicio" type="button"  >Reflexiones estructuradas y Cierres </button> </a>
                           </div>
 					<br>	<br>
         </center>
@@ -267,32 +265,33 @@ La motivación es un factor que debe ser tenido en cuenta por centros educativos
 
 
       <div class="bg-white p-0 rounded my-10 shadow-lg">
-        <footer>
+      <footer style="background-color:<?php echo $var_color_sena; ?>;">
 
-			 <div class="divFp">
+<div class="divFp" style="background-color: <?php echo $var_color_sena; ?>;">
 
-				  <div class="div1F">
-							<img src="../imagenes/sena3.png"  class="imagfooter" >
+  <div class="div1F">
+    <img src="../imagenes/sena3.png" class="imagfooter">
 
-			     </div>
-
-
+  </div>
 
 
-				<div class="div3F">
 
-              Centro Agropecuario Regional Cauca <br>
-Dirección: Cr 9 No 71 N 60, Alto del Cauca - Kilómetro 7 vía a Cali<br>
-Teléfono: (2) 8247678 IP: 22112 Fax: (2) 8247678<br>
-Correo: agropecuario@misena.edu.co
 
-      		     </div>
+  <div class="div3F">
 
-				 <div class="div2F">
-                      	<img src="../imagenes/SENOVA.png"  class="imag2footer" >
-				</div>
-			</div>
-   </footer>
+    Centro Agropecuario Regional Cauca <br>
+    Dirección: Cr 9 No 71 N 60, Alto del Cauca - Kilómetro 7 vía a Cali<br>
+    Teléfono: (2) 8247678 IP: 22112 Fax: (2) 8247678<br>
+    Correo: agropecuario@misena.edu.co
+
+  </div>
+
+  <div class="div2F">
+    <!-- <img src="images/SENOVA.png" class="imag2footer"> -->
+    <img src="../images/LOGOsENNOVA.png" class="imag2footer">
+  </div>
+</div>
+</footer>
    </div>
 
   </div>

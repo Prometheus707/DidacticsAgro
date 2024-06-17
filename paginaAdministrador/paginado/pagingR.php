@@ -29,12 +29,12 @@ $count="SELECT COUNT(*) FROM tda where idTipoTdas='1'";
   echo "<table border='1' class='table table-bordered table-hover'>";
   echo "<thead>";
   echo "<tr>";
-  echo "<th class='t2'><b>Nombre</b></th>";
+  echo "<th class='t2'  style='background:#29a900; color:white;'><b>Nombre</b></th>";
 
-  echo "<th class='t3'>Descripción</th>";
-  echo "<th class='t5'><b>Archivo</b></th>";
-  echo "<th class='t6'><b>Actualizar</b></th>";
-  echo "<th class='t6'><b>Eliminar</b></th>";
+  echo "<th class='t3'  style='background:#29a900; color:white;'>Descripción</th>";
+  echo "<th class='t5'  style='background:#29a900; color:white;'><b>Archivo</b></th>";
+  echo "<th class='t6'  style='background:#29a900; color:white;'><b>Actualizar</b></th>";
+  echo "<th class='t6'  style='background:#29a900; color:white;'><b>Eliminar</b></th>";
   echo "</tr>";
   echo "</thead>";
   echo "<tbody>";
@@ -241,9 +241,6 @@ th {
 	  width:15%;
 	  font-size:3vh;
 	  font-weight: 300;
-  }
-  #t9{
-
   }
 
 </style>
