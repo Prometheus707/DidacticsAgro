@@ -1,8 +1,2 @@
 # DidacticsAgro
-
-
-
-
-
-
-#jhgjyyf
+#didacticsAgor2.0 
